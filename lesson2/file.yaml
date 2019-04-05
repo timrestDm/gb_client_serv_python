@@ -1,0 +1,9 @@
+dict:
+  copy: ©
+  reg: ®
+  yena: µ
+dig: 5
+list:
+- data1
+- data2
+- data3
