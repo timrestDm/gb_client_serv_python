@@ -8,5 +8,14 @@
 # а также установить возможность работы с юникодом: allow_unicode = True;
 # c.	Реализовать считывание данных из созданного файла и проверить, совпадают ли они с исходными.
 
+import yaml
 
-data = {'list': ['data1', 'data2', 'data3'], 'dig': 5, 'dict': {}}
+
+data = {'list': ['data1', 'data2', 'data3'], 'dig': 5, 'dict': {"copy": chr(169) , "m": chr(181), "reg": chr(174)}}
+
+
+with open('file.yaml', 'w') as f_n:
+    yaml.dump(data, f_n, default_flow_style=False, allow_unicode = True)
+
+with open('file.yaml') as f_n:
+    print(f_n.read())
